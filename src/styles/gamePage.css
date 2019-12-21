@@ -1,0 +1,91 @@
+/*******************************************************************/
+/*Game page css*/
+/*******************************************************************/
+.mainContainer {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    background: url("https://backgrounddownload.com/wp-content/uploads/2018/09/blackjack-table-background-7.jpg");
+    background-size: cover;
+    box-shadow: 10px 10px grey;
+    border-radius: 3rem;
+}
+
+.dealerHand {
+    background: url(https://omaharentalads.com/images/arms-clipart-2.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    height: 126px;
+    width: 209px;
+    transform: rotate(6deg);
+    animation: 1s ease-out forwards;
+
+}
+
+.reveal:hover+.dealerHand {
+    animation-name: moveToRight;
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        transform: translateX(+25rem);
+    }
+}
+
+
+/*******************************************************************/
+/*animations in results page*/
+/*******************************************************************/
+.congrats {
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    font-weight: bold;
+    font-size: 4rem;
+    z-index: 200;
+    background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8));
+    opacity: 0.8;
+    min-height: 232px;
+    padding: 4rem;
+    left: 0;
+    right: 0;
+    margin: 1rem auto 0;
+    border-radius: 1rem;
+    animation-name: moveFromLeft;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+}
+
+.resultsFooter {
+    background: #9ce6a2;
+    opacity: 0.8;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    padding: 3rem;
+    margin: 2.5rem;
+    animation-name: moveFromLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    70% {
+        opacity: 0.8;
+        transform: translateX(+2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*******************************************************************/
